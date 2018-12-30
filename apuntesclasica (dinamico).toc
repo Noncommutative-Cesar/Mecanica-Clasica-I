@@ -1,0 +1,93 @@
+\select@language {spanish}
+\contentsline {chapter}{Prefacio}{1}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introducci\'on}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Din\IeC {\'a}mica de una Part\IeC {\'\i }cula}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Leyes de Newton}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Teoremas de Conservaci\IeC {\'o}n}{2}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Trabajo y Energ\IeC {\'\i }a}{2}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Fuerzas Conservativas}{3}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Notaci\IeC {\'o}n de Einstein}{4}{section.1.2}
+\contentsline {chapter}{\numberline {2}Sistemas de Coordenadas y Cinematica}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Sistemas de Referencia}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Coordenadas cartesianas}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Lineas coordenadas}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Cosenos directores}{10}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Coordenadas Esfericas}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Lineas coordenadas}{12}{subsection.2.3.1}
+\contentsline {section}{\numberline {2.4}Vectores Direccionales}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}Metrica y Elemento de Linea}{19}{section.2.5}
+\contentsline {section}{\numberline {2.6}Producto Escalar}{23}{section.2.6}
+\contentsline {section}{\numberline {2.7}M\IeC {\'e}trica Inversa}{24}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Notaci\IeC {\'o}n de indices}{25}{subsection.2.7.1}
+\contentsline {section}{\numberline {2.8}Simbolos de Christoffel}{27}{section.2.8}
+\contentsline {section}{\numberline {2.9}Transformaci\IeC {\'o}n de Coordenadas}{32}{section.2.9}
+\contentsline {section}{\numberline {2.10}Cinematica de una Particula }{34}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}Velocidad}{35}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}$\mathaccentV {vec}17E{v}$ en coordenadas cartesianas}{35}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.10.3}$\mathaccentV {vec}17E{v}$ en coordenadas cilindricas}{36}{subsection.2.10.3}
+\contentsline {subsection}{\numberline {2.10.4}Relacion entre $v$ y $ds$}{36}{subsection.2.10.4}
+\contentsline {subsection}{\numberline {2.10.5}Aceleraci\IeC {\'o}n}{37}{subsection.2.10.5}
+\contentsline {subsection}{\numberline {2.10.6}$\mathaccentV {vec}17E{a}$ en coordenadas cartesianas}{38}{subsection.2.10.6}
+\contentsline {subsection}{\numberline {2.10.7}$\mathaccentV {vec}17E{a}$ en coordenadas cilindricas}{38}{subsection.2.10.7}
+\contentsline {chapter}{\numberline {3}Fuerzas Centrales}{41}{chapter.3}
+\contentsline {section}{\numberline {3.1}Principio de Conservaci\IeC {\'o}n de la Energ\IeC {\'\i }a y el Momento Angular}{42}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Potencial efectivo}{44}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Ecuaciones param\IeC {\'e}tricas}{45}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Ecuaci\IeC {\'o}n de la Trayectoria}{46}{section.3.2}
+\contentsline {section}{\numberline {3.3}Ecuaci\IeC {\'o}n de Binet}{46}{section.3.3}
+\contentsline {section}{\numberline {3.4}Problema de Kepler}{47}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Determinaci\IeC {\'o}n de $\epsilon $ en funcion de $E$ y $L_0$}{48}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}Problema Unidimensional Equivalente}{50}{section.3.5}
+\contentsline {chapter}{\numberline {4}Grados de Libertad, Vinculos y Coordenadas Generalizadas}{54}{chapter.4}
+\contentsline {section}{\numberline {4.1}Vinculos}{55}{section.4.1}
+\contentsline {section}{\numberline {4.2}Clasificaci\IeC {\'o}n de los V\IeC {\'\i }nculos}{57}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}V\IeC {\'\i }nculos Holonomos y Anholonomos}{57}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Reacciones Vinculares}{57}{section.4.3}
+\contentsline {section}{\numberline {4.4}Coordenadas Generalizadas}{59}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Fuerza Generalizada}{61}{subsection.4.4.1}
+\contentsline {chapter}{\numberline {5}Principio de los Trabajos Virtuales}{63}{chapter.5}
+\contentsline {section}{\numberline {5.1}Desplazamiento Virtual}{63}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabajo Virtual}{63}{section.5.2}
+\contentsline {section}{\numberline {5.3}Teorema de Torricelli}{64}{section.5.3}
+\contentsline {section}{\numberline {5.4}Principio de D\IeC {\textquoteright }Alembert}{65}{section.5.4}
+\contentsline {chapter}{\numberline {6}Formalismo Lagrangiano}{67}{chapter.6}
+\contentsline {section}{\numberline {6.1}Ecuaciones de Euler-Lagrange}{67}{section.6.1}
+\contentsline {section}{\numberline {6.2}Funci\IeC {\'o}n Lagrangiana o Lagrangiano}{69}{section.6.2}
+\contentsline {section}{\numberline {6.3}Energ\IeC {\'\i }as cin\IeC {\'e}tica y potencial en coordenadas generalizadas}{70}{section.6.3}
+\contentsline {section}{\numberline {6.4}Potenciales generalizados}{71}{section.6.4}
+\contentsline {section}{\numberline {6.5}Principio de Hamilton}{72}{section.6.5}
+\contentsline {section}{\numberline {6.6}No Unicidad de la funci\IeC {\'o}n Lagrangiana}{74}{section.6.6}
+\contentsline {section}{\numberline {6.7}Curvas Geod\'esicas.}{75}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Ejemplo en $\mathbb {R}^{2}$.}{75}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Curvas Geod\'esicas en cualquier espacio.}{78}{subsection.6.7.2}
+\contentsline {section}{\numberline {6.8}Caso Electromagnetico}{82}{section.6.8}
+\contentsline {section}{\numberline {6.9}Teoremas de Conservaci\IeC {\'o}n}{84}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Funci\IeC {\'o}n Energ\IeC {\'\i }a y Conservaci\IeC {\'o}n de la Energ\IeC {\'\i }a}{86}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}Relaci\IeC {\'o}n entre energ\IeC {\'\i }a y funci\IeC {\'o}n energ\IeC {\'\i }a }{87}{subsection.6.9.2}
+\contentsline {chapter}{\numberline {7}Formalismo Hamiltoniano}{89}{chapter.7}
+\contentsline {section}{\numberline {7.1}Transformaciones de Legendre}{90}{section.7.1}
+\contentsline {section}{\numberline {7.2}Ecuaciones de Hamilton}{90}{section.7.2}
+\contentsline {section}{\numberline {7.3}Corchetes de Poisson}{91}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Constantes del movimiento con corchetes de Poisson }{92}{subsection.7.3.1}
+\contentsline {section}{\numberline {7.4}Forma Simpl\IeC {\'e}ctica de las Ecuaciones de Hamilton}{93}{section.7.4}
+\contentsline {chapter}{\numberline {8}Transformaciones Canonicas}{95}{chapter.8}
+\contentsline {section}{\numberline {8.1}Transformaciones Can\'onicas}{95}{section.8.1}
+\contentsline {section}{\numberline {8.2}El hamiltoniano no cambia de forma funcional}{96}{section.8.2}
+\contentsline {section}{\numberline {8.3}El Hamiltoniano cambia de forma funcional}{97}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}$\Omega (q,Q,t) = F_{1}(q,Q,t)$}{98}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}$\Omega (q,P,t) = F_{2}(q,P,t)$}{98}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.3}$\Omega (p,Q,t) = F_{3}(p,Q,t)$}{99}{subsection.8.3.3}
+\contentsline {subsection}{\numberline {8.3.4}$\Omega (p,P,t) = F_{4}(p,P,t)$}{100}{subsection.8.3.4}
+\contentsline {chapter}{\numberline {9}Teoria de Hamilton-Jacobi}{101}{chapter.9}
+\contentsline {section}{\numberline {9.1}Ecuaci\IeC {\'o}n de Hamilton-Jacobi}{101}{section.9.1}
+\contentsline {section}{\numberline {9.2}Interpretaci\IeC {\'o}n de la funci\IeC {\'o}n principal de Hamilton}{102}{section.9.2}
+\contentsline {section}{\numberline {9.3}Ejemplos de aplicaci\IeC {\'o}n del M\IeC {\'e}todo de Hamilton-Jacobi}{103}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Oscilador Arm\IeC {\'o}nico}{103}{subsection.9.3.1}
+\contentsline {chapter}{\numberline {A} Principio Variacional}{105}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Principio Variacional}{105}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}C\IeC {\'a}lculo Funcional}{105}{subsection.Alph1.1.1}
+\contentsline {subsubsection}{\numberline {A.1.1.1}C\IeC {\'a}lculo diferencial funcional}{106}{subsubsection.Alph1.1.1.1}
+\contentsline {subsubsection}{\numberline {A.1.1.2}Derivada funcional}{106}{subsubsection.Alph1.1.1.2}
+\contentsline {subsection}{\numberline {A.1.2}Ecuaciones de Euler-Lagrange}{107}{subsection.Alph1.1.2}
+\contentsline {subsubsection}{\numberline {A.1.2.1}Caso: Mec\IeC {\'a}nica Cl\IeC {\'a}sica}{108}{subsubsection.Alph1.1.2.1}
+\contentsline {chapter}{\numberline {B}Tensores}{109}{appendix.Alph2}

@@ -1,0 +1,422 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{scrartcl}
+\usepackage[a4paper,pdftex]{geometry}
+\setlength{\oddsidemargin}{5mm}			
+\setlength{\evensidemargin}{5mm}
+
+\usepackage[spanish,activeacute]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+\begin{document}
+
+\section{Curvas Geod\'esicas.}
+
+\subsection{Ejemplo en $\mathbb{R}^{2}$.}
+
+(ARREGLAR INTRODUCCION)
+
+Ya vimos que podemos usar el calculo variacional para obtener las ecuaciones del movimiento. Pero esta no es la \'unica aplicaci\'on que 
+tiene el calculo de variaciones. Como vimos, consiste en perturbar continuamente una curva (usando un parametro) y encontrar la curva que 
+extremize la acci'on. As\'i podemos usar el principio variacional para encontrar la curva de minima distancia entre dos puntos. Veamos 
+primero el siguiente ejemplo para entender la situacion: \\
+
+En el espacio Euclidiano $\mathbb{R}^{2}$ el elemento de linea esta dado por:
+	\begin{equation*}
+		ds^{2} = dx^{2} + dy^{2}
+	\end{equation*}
+
+Recordando que $s$ es la distancia entre dos puntos del espacio, digamos $P$ y $Q$, para $\mathbb{R}^{2}$, la distancia entre 
+$P$ y $Q$ est\'a dada por:
+	\begin{equation*}
+		s = \int^{Q}_{P} ds = \int^{Q}_{P} \sqrt{dx^{2} + dy^{2}}
+	\end{equation*}
+
+Esta ser\'a nuestra acci\'on a extremar. \\
+
+Ahora consideremos una curva cualquiera (con extremos los puntos $P$ y $Q$) en el espacio, parametrizada con un parametro 
+$\lambda$, tal que:
+	\begin{align*}
+		x &= x \left( \lambda \right) \\
+		y &= y \left( \lambda \right)
+	\end{align*}
+
+Luego, de la regla de la cadena tenemos que:
+	\begin{align*}
+		dx &= \frac{dx}{d\lambda} d\lambda \\
+		dy &= \frac{dy}{d\lambda} d\lambda
+	\end{align*}
+	
+Y definimos:
+	\begin{align*}
+		Q &= \left( x \left(\lambda_{f} \right) , y \left(\lambda_{f} \right) \right) \\
+		P &= \left( x \left(\lambda_{i} \right) , y \left(\lambda_{i} \right) \right)
+	\end{align*}
+	
+Usaremos la notaci\'on:
+	\begin{align*}
+		x' &= \frac{dx}{d\lambda} \\
+		y' &= \frac{dy}{d\lambda}
+	\end{align*}
+
+Reemplazando esto en la acci\'on, tenemos:
+	\begin{equation*}
+		s = \int^{\lambda_{f}}_{\lambda_{i}} \sqrt{x'^{2} + y'^{2}}d\lambda
+	\end{equation*}	
+		
+Ahora apliquemos la variaci\'on:
+	\begin{align*}
+		\delta s &= \delta \int^{\lambda_{f}}_{\lambda_{i}}  \sqrt{ x'^{2} + y'^{2} }d\lambda \\
+				 &= \int^{\lambda_{f}}_{\lambda_{i}}  \delta \sqrt{ x'^{2} + y'^{2} }d\lambda \\
+				 &= \int^{\lambda_{f}}_{\lambda_{i}}  \left( \frac{x' \delta x'}{\sqrt{ x'^{2} + y'^{2} }} + \frac{y' \delta y'}{\sqrt{ x'^{2} + y'^{2} }} \right) d\lambda \\
+				 &= \int^{\lambda_{f}}_{\lambda_{i}}  \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \delta x' d\lambda 
+				  + \int^{\lambda_{f}}_{\lambda_{i}}  \frac{y'}{\sqrt{ x'^{2} + y'^{2} }} \delta y' d\lambda
+	\end{align*}
+
+Trabajaremos con el termino que:
+	\begin{equation*}
+		\int^{\lambda_{f}}_{\lambda_{i}}  \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \delta x' d\lambda  
+	\end{equation*}
+
+Recordemos que:
+	\begin{equation*}
+		\delta x'= \delta \frac{dx}{d\lambda} = \frac{d}{d\lambda} \left( \delta x \right) = \frac{d \delta x}{d\lambda}
+	\end{equation*}
+
+As\'i:
+	\begin{equation*}
+		\int^{\lambda_{f}}_{\lambda_{i}}  \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \delta x' d\lambda =  \int^{\lambda_{f}}_{\lambda_{i}}  \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \frac{d \delta x}{d\lambda} d\lambda 
+	\end{equation*}
+
+Veamos que:
+	\begin{equation*}
+		\frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \frac{d \delta x}{d\lambda} = \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \delta x  \right) 
+																		  - \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta x 
+	\end{equation*}
+
+Luego:
+	\begin{align*}
+		\int^{\lambda_{f}}_{\lambda_{i}}  \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \frac{d \delta x}{d\lambda} d\lambda 
+		  &= \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \delta x  \right) d\lambda
+	   	  - \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta x d\lambda \\
+	   	  &= \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \delta x \right) \Big|^{\lambda_{f}}_{\lambda_{i}} - \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta x d\lambda \\
+	\end{align*}
+
+Y como:
+	\begin{equation*}
+		\delta x (\lambda_{f}) = \delta x (\lambda_{i}) = 0 
+	\end{equation*}
+
+Obtenemos que:
+	\begin{align*}
+		\int^{\lambda_{f}}_{\lambda_{i}}  \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \frac{d \delta x}{d\lambda} d\lambda = - \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta x d\lambda 
+	\end{align*}
+
+Por lo tanto:
+	\begin{align*}
+		\int^{\lambda_{f}}_{\lambda_{i}}  \frac{x'}{\sqrt{ x'^{2} + y'^{2} }} \delta x' d\lambda = - \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta x d\lambda 
+	\end{align*}
+	
+Analogamente:
+	\begin{align*}
+		\int^{\lambda_{f}}_{\lambda_{i}}  \frac{y'}{\sqrt{ x'^{2} + y'^{2} }} \delta y' d\lambda = - \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{y'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta y d\lambda 
+	\end{align*}
+
+Por lo que:
+	\begin{equation*}
+		\delta s = - \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta x d\lambda  - \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{y'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta y d\lambda 
+	\end{equation*}	
+
+Si pedimos que $\delta s = 0$ (buscamos los extremos), tenemos que:
+	\begin{align*}
+		- \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta x d\lambda  - \int^{\lambda_{f}}_{\lambda_{i}}  \frac{d}{d\lambda} \left( \frac{y'}{\sqrt{ x'^{2} + y'^{2} }}  \right) \delta y d\lambda = 0
+	\end{align*}
+
+Y como $\delta x$ y  $\delta y$ son linealmente independientes, tenemos que:
+	\begin{align*}
+		\frac{d}{d\lambda} \left( \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  \right) &= 0 \\
+		\frac{d}{d\lambda} \left( \frac{y'}{\sqrt{ x'^{2} + y'^{2} }}  \right) &= 0
+	\end{align*}
+
+De donde:
+	\begin{align*}
+		 \frac{x'}{\sqrt{ x'^{2} + y'^{2} }}  &= A \\
+		 \frac{y'}{\sqrt{ x'^{2} + y'^{2} }}  &= B
+	\end{align*}
+
+Con $A$ y $B$ constantes. Dividimos las expresiones y obtenemos:
+	\begin{align*}
+		\frac{y'}{x'} = C
+	\end{align*}
+
+Y como:
+	\begin{equation*}
+		\frac{y'}{x'} = \frac{dy/d\lambda}{dx/d\lambda} = \frac{dy}{d\lambda} \frac{d\lambda}{dx} = \frac{dy}{dx}
+	\end{equation*}
+
+Finalmente:
+	\begin{align*}
+		\frac{dy}{dx} &= C \\
+		\Rightarrow y &= Cx + D
+	\end{align*}
+	
+Lo que corresponde a una recta. \\
+
+En resumen, perturbamos una curva en el espacio Euclidiano $\mathbb{R}^{2}$ y aplicamos el principio variacional para encontrar la curva de 
+longitud minima entre dos puntos, obteniendo as\'i una recta, lo cual era el resultado esperado. \\
+
+\textbf{Nota:} El calculo fue realizado de la manera m\'as general posible, no necesariamente siendo esto la manera m\'as \'optima de 
+aplicar la variaci\'on. Sugerimos rehacer el calculo, pero esta vez, usando el teorema de la funci\'on implicita, para obtener la ecuaci\'on 
+de la curva de la forma $y=y(x)$, y luego hacer variar la acci\'on. Se dar\'a cuenta de que realizar el calculo de esta forma es mucho m\'as 
+sencillo (pero no tan general). \\
+
+\textit{Hint:} Debe obtener el mismo resultado anterior :)
+
+\subsection{Curvas Geod\'esicas en cualquier espacio.}
+
+Una vez entendido la manera de abordar este problema, nos gustar\'ia saber cual es la curva de minima longitud que une dos puntos, 
+esta vez no necesariamente en $\mathbb{R}^{2}$, sino que, en \textbf{cualquier espacio}, de \textbf{cualquier dimensi\'on}. \\
+
+Empecemos considerando un espacio de $n$ dimensiones, con una m\'etrica $g_{ij}$, donde $i,j = 1,...,n$. El elemento de linea en este espacio 
+esta dado por:
+	\begin{equation*}
+		ds^{2} = g_{ij}dx^{i}dx^{j}
+	\end{equation*}
+
+Como en el ejemplo, consideremos dos puntos ($P$ y $Q$) en el espacio, la distancia entre ellos esta dada por:
+	\begin{equation*}
+		s = \int^{Q}_{P} ds = \int^{Q}_{P} \sqrt{g_{ij}dx^{i}dx^{j}}
+	\end{equation*}
+
+Siguiendo con la metodolog\'ia usada en el ejemplo, consideremos una curva en el espacio, que tiene por extremos los puntos $P$ y $Q$, 
+y que ademas esta parametrizada con un parametro $\lambda$, tal que:
+	\begin{equation*}
+		x^{i} = x^{i} (\lambda)
+	\end{equation*}
+
+De donde:
+	\begin{equation*}
+		dx^{i} = \frac{dx^{i}}{d\lambda} d\lambda = x'^{i}d\lambda
+	\end{equation*}
+	
+Y definimos:
+	\begin{align*}
+		Q &= \left( x^{1} \left(\lambda_{f} \right) ,...,  x^{n} \left(\lambda_{f} \right) \right) \\
+		P &= \left( x^{1} \left(\lambda_{i} \right) ,...,  x^{n} \left(\lambda_{i} \right) \right)
+	\end{align*}
+	
+Notemos que:
+	\begin{equation*}
+		\frac{ds}{d\lambda} = \sqrt{g_{ij}x'^{i}x'^{j}}
+	\end{equation*}
+
+Reemplazando en la acci\'on:
+	\begin{equation*}
+		s = \int^{\lambda_{f}}_{\lambda{i}} \sqrt{g_{ij}x'^{i}x'^{j}} d\lambda
+	\end{equation*}
+
+Aplicando la varici\'on:
+	\begin{align*}
+		\delta s &= \delta\int^{\lambda_{f}}_{\lambda{i}} \sqrt{g_{ij}x'^{i}x'^{j}} d\lambda \\
+				 &= \int^{\lambda_{f}}_{\lambda{i}} \delta \sqrt{g_{ij}x'^{i}x'^{j}} d\lambda \\
+				 &= \int^{\lambda_{f}}_{\lambda{i}} \frac{\delta\left( g_{ij}x'^{i}x'^{j} \right)}{2\sqrt{g_{ab}x'^{a}x'^{b}}} d\lambda \\
+				 &= \int^{\lambda_{f}}_{\lambda{i}} \frac{\delta g_{ij}x'^{i}x'^{j} + 2g_{ij}x'^{i}\delta x'^{j}}{2\sqrt{g_{ab}x'^{a}x'^{b}}} d\lambda \\
+	\end{align*}
+	
+Notemos que:
+	\begin{equation*}
+		\delta g_{ij} = \frac{\partial g_{ij}}{\partial x^{k}} \delta x^{k}
+	\end{equation*}
+	
+As\'i: 
+	\begin{align*}
+		\delta s &= \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{2\sqrt{g_{ab}x'^{a}x'^{b}}} \left(  \frac{\partial g_{ij}}{\partial x^{k}}x'^{i}x'^{j} \delta x^{k} + 2g_{ij}x'^{i}\delta x'^{j} \right) d\lambda \\
+				 &= \int^{\lambda_{f}}_{\lambda{i}} \left( \frac{\frac{\partial g_{ij}}{\partial x^{k}}x'^{i}x'^{j}}{2\sqrt{g_{ab}x'^{a}x'^{b}}} \delta x^{k}
+				                                        +  \frac{g_{ij}x'^{i}\delta x'^{j}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \right) d\lambda 
+	\end{align*}
+
+Veamos el termino:
+	\begin{equation*}
+		\frac{g_{ij}x'^{i}\delta x'^{j}}{\sqrt{g_{ab}x'^{a}x'^{b}}}
+	\end{equation*}
+
+Recordemos que:
+	\begin{equation*}
+		\delta x'^{i} = \frac{d \delta x^{i}}{d\lambda}
+	\end{equation*}
+
+As\'i:
+	\begin{align*}
+		\frac{g_{ij}x'^{i}\delta x'^{j}}{\sqrt{g_{ab}x'^{a}x'^{b}}} &= \frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}}\frac{d \delta x^{j}}{d\lambda} \\
+																	&= \frac{d}{d\lambda} \left(\frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \delta x^{j}\right) 
+																	 - \frac{d}{d\lambda} \left( \frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \right)\delta x^{j}
+	\end{align*}
+	
+Luego:
+	\begin{align*}
+		\int^{\lambda_{f}}_{\lambda{i}} \frac{g_{ij}x'^{i}\delta x'^{j}}{\sqrt{g_{ab}x'^{a}x'^{b}}} d\lambda
+			&= \int^{\lambda_{f}}_{\lambda{i}} \frac{d}{d\lambda} \left(\frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \delta x^{j}\right) d\lambda
+			 - \int^{\lambda_{f}}_{\lambda{i}} \frac{d}{d\lambda} \left( \frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \right)\delta x^{j} d\lambda \\
+			&= \left( \frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \delta x^{j} \right) \Big|^{\lambda_{f}}_{\lambda_{i}} 
+			- \int^{\lambda_{f}}_{\lambda{i}} \frac{d}{d\lambda} \left( \frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \right) \delta x^{j} d\lambda
+	\end{align*}
+	
+Y como:
+	\begin{equation*}
+		\delta x^{i} (\lambda_{i}) = \delta x^{i} = 0
+	\end{equation*}
+
+Tenemos que:
+	\begin{equation*}
+		\int^{\lambda_{f}}_{\lambda{i}} \frac{g_{ij}x'^{i}\delta x'^{j}}{\sqrt{g_{ab}x'^{a}x'^{b}}} d\lambda
+			= - \int^{\lambda_{f}}_{\lambda{i}} \frac{d}{d\lambda} \left( \frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \right) \delta x^{j} d\lambda
+	\end{equation*}
+		
+Luego:
+	\begin{align*}
+		\delta s &= \int^{\lambda_{f}}_{\lambda{i}} \left( \frac{\frac{\partial g_{ij}}{\partial x^{k}}x'^{i}x'^{j}}{2\sqrt{g_{ab}x'^{a}x'^{b}}} \delta x^{k}
+				                                        -  \frac{d}{d\lambda} \left( \frac{g_{ij}x'^{i}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \right) \delta x^{j} \right) d\lambda \\ 
+				 &= \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( \frac{1}{2}\frac{\partial g_{ij}}{\partial x^{k}} x'^{i}x'^{j} \delta x^{k}
+				                                        -  \sqrt{g_{cd}x'^{c}x'^{d}}\frac{d}{d\lambda} \left( \frac{g_{ij}x'^{i}}{\sqrt{g_{ef}x'^{e}x'^{f}}} \right) \delta x^{j} \right) d\lambda \\ 
+				 &= \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( \frac{1}{2}\frac{\partial g_{ij}}{\partial x^{k}} x'^{i}x'^{j} \delta x^{k}
+				                                        - \frac{d}{d\lambda} \left( g_{ij}x'^{i} \right) \delta x^{j}  
+				                                        + \frac{g_{ij}x'^{i}}{\sqrt{g_{ef}x'^{e}x'^{f}}} \frac{d}{d\lambda} \left( \sqrt{g_{cd}x'^{c}x'^{d}} \right) \delta x^{j} 
+														\right) d\lambda\\
+				&= 	\int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( \frac{1}{2}\frac{\partial g_{ij}}{\partial x^{k}} x'^{i}x'^{j} \delta x^{k}
+				                                        - \frac{\partial g_{ij}}{\partial x^{k}} x'^{i} x'^{k}\delta x^{j} - g_{ij}x''^{i}\delta x^{j}  
+				                                        + \frac{g_{ij}x'^{i}}{\sqrt{g_{ef}x'^{e}x'^{f}}} \frac{d}{d\lambda} \left( \sqrt{g_{cd}x'^{c}x'^{d}} \right) \delta x^{j} 
+														\right) d\lambda										
+	\end{align*}
+	
+Notemos que:
+	\begin{equation*}
+		\frac{1}{\sqrt{g_{ef}x'^{e}x'^{f}}} \frac{d}{d\lambda} \left( \sqrt{g_{cd}x'^{c}x'^{d}} \right)
+		=  \frac{d}{d\lambda} \left( \ln \left( \sqrt{g_{cd}x'^{c}x'^{d}} \right) \right)
+	\end{equation*}
+
+Definiendo:
+	\begin{equation*}
+		\alpha(s) = \frac{d}{d\lambda} \left( \ln \left( \sqrt{g_{cd}x'^{c}x'^{d}} \right) \right)
+	\end{equation*}
+	
+Reemplazando en $\delta s$ y cambiando el indice de suma:
+	\begin{equation*}
+		\delta s =  \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( \frac{1}{2}\frac{\partial g_{ij}}{\partial x^{k}} x'^{i}x'^{j} 
+			                                       - \frac{\partial g_{ik}}{\partial x^{j}} x'^{i} x'^{j} - g_{ik}x''^{i} 
+				                                        + \alpha\left( s \right) g_{ik}x'^{i} 
+														\right) \delta x^{k}  d\lambda	
+	\end{equation*}
+	
+\newpage
+	
+Notemos que (ejercicio):
+	\begin{equation*}
+		\frac{\partial g_{ik}}{\partial x^{j}} x'^{i} x'^{j} = \frac{1}{2} \left( \frac{\partial g_{ik}}{\partial x^{j}} + \frac{\partial g_{jk}}{\partial x^{i}} \right) x'^{i}x'^{j}
+	\end{equation*}
+
+\textit{Hint:} Tensores sim\'etricos y antisim\'etricos.\\
+
+Reemplazando lo anterior:
+	\begin{align*}
+		\delta s &=  \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( \frac{1}{2}\frac{\partial g_{ij}}{\partial x^{k}} x'^{i}x'^{j} 
+				                                    - \frac{1}{2} \left( \frac{\partial g_{ik}}{\partial x^{j}} + \frac{\partial g_{jk}}{\partial x^{i}} \right) x'^{i}x'^{j} - g_{ik}x''^{i} 
+				                                        + \alpha\left( s \right) g_{ik}x'^{i} 
+														\right) \delta x^{k}  d\lambda\\	
+				 &=  \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( 
+													\frac{1}{2}\frac{\partial g_{ij}}{\partial x^{k}} x'^{i}x'^{j} 
+				                                    - \frac{1}{2}\frac{\partial g_{ik}}{\partial x^{j}}x'^{i}x'^{j} - \frac{1}{2}\frac{\partial g_{jk}}{\partial x^{i}} x'^{i}x'^{j} - g_{ik}x''^{i} 
+				                                        + \alpha\left( s \right) g_{ik}x'^{i} 
+														\right) \delta x^{k}  d\lambda \\
+				 &=  \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( - g_{ik}x''^{i}
+													-\frac{1}{2}\left( \frac{\partial g_{ik}}{\partial x^{j}} + \frac{\partial g_{jk}}{\partial x^{i}}-\frac{\partial g_{ij}}{\partial x^{k}} \right)x'^{i}x'^{j}
+				                                        + \alpha \left( s \right) g_{ik}x'^{i} 
+														\right) \delta x^{k}  d\lambda \\
+				 &=  \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( - g_{il}x''^{i}
+													-\frac{1}{2}\left( \frac{\partial g_{kl}}{\partial x^{j}} + \frac{\partial g_{jl}}{\partial x^{k}}-\frac{\partial g_{kj}}{\partial x^{l}} \right)x'^{j}x'^{k}
+				                                        + \alpha\left( s \right) g_{il}x'^{i} 
+														\right) \delta x^{l}  d\lambda \\	
+				 &=  \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( - g_{il}x''^{i}
+													-\frac{1}{2}\delta^{m}_{l}\left( \frac{\partial g_{km}}{\partial x^{j}} + \frac{\partial g_{jm}}{\partial x^{k}}-\frac{\partial g_{kj}}{\partial x^{m}} \right)x'^{j}x'^{k}
+				                                        + \alpha\left( s \right) g_{il}x'^{i} 
+														\right) \delta x^{l}  d\lambda \\																																												
+	\end{align*}
+
+Pero:
+	\begin{equation*}
+		\delta^{m}_{l} = g_{il}g^{im}
+	\end{equation*}
+
+Tenemos que:
+	\begin{align*}
+		\delta s &=  \int^{\lambda_{f}}_{\lambda{i}} \frac{1}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( - g_{il}x''^{i}
+													-\frac{1}{2}g_{il}g^{im}\left( \frac{\partial g_{km}}{\partial x^{j}} + \frac{\partial g_{jm}}{\partial x^{k}}-\frac{\partial g_{kj}}{\partial x^{m}} \right)x'^{j}x'^{k}
+				                                        + \alpha\left( s \right) g_{il}x'^{i} 
+														\right) \delta x^{l}  d\lambda \\
+			     &=  \int^{\lambda_{f}}_{\lambda{i}} \frac{g_{il}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( - x''^{i}
+													-\frac{1}{2}g^{im}\left( \frac{\partial g_{km}}{\partial x^{j}} + \frac{\partial g_{jm}}{\partial x^{k}}-\frac{\partial g_{kj}}{\partial x^{m}} \right)x'^{j}x'^{k}
+				                                        + \alpha\left( s \right) x'^{i} 
+														\right) \delta x^{l}  d\lambda \\																																												
+	\end{align*}
+	
+Recordando que el simbolo de Christofell se define como:
+	\begin{equation*}
+		\Gamma^{i}_{jk} = \frac{1}{2} g^{im} \left( \frac{\partial g_{km}}{\partial x^{j}} + \frac{\partial g_{jm}}{\partial x^{k}}-\frac{\partial g_{kj}}{\partial x^{m}}    \right)
+	\end{equation*}
+	
+Finalmente obtenemos que:
+	\begin{equation*}
+		\delta s =  \int^{\lambda_{f}}_{\lambda{i}} \frac{g_{il}}{\sqrt{g_{ab}x'^{a}x'^{b}}} \left( - x''^{i}
+													-\Gamma^{i}_{jk} x'^{j}x'^{k} + \alpha\left( s \right) x'^{i} 
+														\right) \delta x^{l}  d\lambda 																																											
+	\end{equation*}
+	
+Pidiendo que $\delta s = 0$ y considerando que los $\delta x^{i}$ son linealmente independiente, obtenemos que:
+	\begin{equation*}
+		x''^{i} + \Gamma^{i}_{jk} x'^{j}x'^{k} = \alpha\left( s \right) x'^{i}
+	\end{equation*}
+
+Esta es llamada \textbf{Ecuaci\'on de la Geod\'esica}, esta es la curva de minima longitud entre dos puntos, que esta parametrizada 
+con un parametro cualquiera $\lambda$. Pero esta ecuaci\'on puede ser bastante dif\'icil de resolver debido a la funci\'on $\alpha(s)$. 
+Ser\'ia bastante comodo que esta funci\'on fuera igual a cero. Veamos que pasa si pedimos esa condici\'on:
+	\begin{align*}
+		\alpha(s) &= 0 \\
+		\Rightarrow \frac{d}{d\lambda} \left( \ln \left( g_{ab} x'^{a}x'^{b}\right) \right) &= 0 \\
+		\Rightarrow \frac{d}{d\lambda} \left( \ln \left( \frac{ds}{d\lambda }\right) \right) &= 0 \\
+		\Rightarrow \frac{d\lambda}{ds}\frac{d^{2}s}{d\lambda^{2}} &= 0 \\
+		\Rightarrow \frac{d^{2}s}{d\lambda^{2}} &= 0 \\
+		\Rightarrow s &= a \lambda + b \\  
+		\Rightarrow \lambda &= \frac{s}{a} - b \\
+	\end{align*}
+
+La longitud de arco $s$ puede ser usada como par\'ametro a lo largo de la curva. A $s$ se le llama par\'ametro natural, y a $x^{i} = x^{i}(s)$ 
+se le llama parametrizaci\'on natural. Para el par\'ametro natural usaremos la siguiente notaci\'on:
+	\begin{equation*}
+		\dot{x}^{i} = \frac{dx^{i}}{ds}
+	\end{equation*}
+
+Si una curva esta parametrizada con el par\'ametro natural se cumple que:
+	\begin{equation*}
+		 \sqrt{g_{ij}\dot{x}^{i} \dot{x}^{j}} = 1
+	\end{equation*}
+
+Notemos que:
+	\begin{align*}
+		\frac{d}{d\lambda} &= \frac{d}{ds}\frac{ds}{d\lambda} \\ 
+						   &= a\frac{d}{ds} \\
+		\Rightarrow x'^{i} &= a \dot{x}^{i} \\
+		\Rightarrow x''^{i} &= a^{2} \ddot{x}^{i} \\
+ 	\end{align*}
+	
+Reemplazando en la ecuaci\'on de la geod\'esica	obtenemos:
+	\begin{equation*}
+		\ddot{x}^{i} + \Gamma^{i}_{jk} \dot{x}^{j}\dot{x}^{k} = 0
+	\end{equation*}
+
+Que corresponde a la \textbf{ Ecuaci\'on de la Geod\'esica Af\'in}.
+
+\end{document}
+
+

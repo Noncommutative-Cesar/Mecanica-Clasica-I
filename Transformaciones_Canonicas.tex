@@ -1,0 +1,308 @@
+\documentclass[paper=a4, fontsize=11pt,twoside]{scrartcl}
+\usepackage[a4paper,pdftex]{geometry}
+\setlength{\oddsidemargin}{5mm}			
+\setlength{\evensidemargin}{5mm}
+
+\usepackage[spanish,activeacute]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+\begin{document}
+
+\section{Transformaciones Can\'onicas}
+
+Corresponden a transformaci\'ones de coordenadas $(q^{a},p_{b}) \rightarrow (Q^{a},P_{b})$ que dejan invariante en 
+forma las ecuaciones del movimiento, es decir, si las ecuaciones en el sistema $(q^{a},p_{b}) $ son:
+	\begin{align*}
+		\dot{q}^{a} &= \frac{\partial H}{\partial p_{a}} \\
+		 \dot{p}_{a} &= -\frac{\partial H}{\partial q^{a}}
+	\end{align*}
+
+Entonces las ecuaciones en el sistema $(Q^{a},P_{b})$, ser\'an:
+	\begin{align*}
+		\dot{Q}^{a} &= \frac{\partial K}{\partial P_{a}} \\
+	    \dot{P}_{a} &= -\frac{\partial K}{\partial Q^{a}}
+	\end{align*}
+
+donde $K(Q,P,t)$ corresponde al Hamiltoniano en el nuevo sistema.\\
+
+Las coordenadas antiguas satisfacen un principio de Hamilton (modificiado) de la forma
+	\begin{equation*}
+		\delta\int^{t_{2}}_{t_{1}} \dot{q}^{a}p_{a} - H(q,p,t) dt = 0
+	\end{equation*}
+	
+Analogamente, las coordenadas nuevas satisfacen:
+	\begin{equation*}
+		\delta\int^{t_{2}}_{t_{1}} \dot{Q}^{a}P_{a} - K(q,p,t) dt = 0
+	\end{equation*}
+
+Para que estos integrandos sean iguales se debe cumplir que:
+	\begin{equation*}
+		\dot{q}^{a}p_{a} - H(q,p,t) =  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \frac{d\Omega}{dt}
+	\end{equation*}
+
+donde a $\Omega$ se le llama funci\'on generatriz.\\
+
+De aqui, tenemos dos casos, uno en el que el hamiltoniano no cambia de forma funcional, y otro en que si lo hace.
+
+\section{El hamiltoniano no cambia de forma funcional}
+
+Esto es:
+	\begin{equation*}
+		H(q,p) = H(Q,P) = K(Q,P)
+	\end{equation*}
+
+Usando la forma simplectica de las ecuaciones de Hamilton para las coordenadas antiguas:
+	\begin{equation*}
+		\dot{\chi}^{A} = J^{AB}\frac{\partial H}{\partial \chi^{B}}
+	\end{equation*}
+
+Y analogamente para las coordenadas nuevas:
+	\begin{equation*}
+		\dot{\chi'}^{A} = J^{AB}\frac{\partial K}{\partial \chi'^{B}}
+	\end{equation*}
+	
+Y como usamos un cambio de variable $ \chi^{A} = \chi^{A} (\chi'^{B}) $, tenemos que:
+	\begin{align*}
+		\dot{\chi}^{A} &= \frac{\partial \chi^{A}}{\partial \chi'^{B}} \dot{\chi'}^{B} \\
+		\frac{\partial }{\partial \chi^{B}} &= \frac{\partial \chi'^{C}}{\partial \chi^{B}} \frac{\partial }{\partial \chi'^{C}}
+	\end{align*}
+	
+Luego:
+	\begin{align*}
+		\dot{\chi}^{A} &= J^{AB}\frac{\partial H}{\partial \chi^{B}}  \\
+\Rightarrow \frac{\partial \chi^{A}}{\partial \chi'^{C}} \dot{\chi'}^{C} &= 
+             J^{AB}\frac{\partial \chi'^{D}}{\partial \chi^{B}} \frac{\partial H}{\partial \chi'^{D}} \\
+\Rightarrow  \dot{\chi'}^{C} &=  
+             \frac{\partial \chi'^{C}}{\partial \chi^{A}}J^{AB}\frac{\partial \chi'^{D}}{\partial \chi^{B}} \frac{\partial H}{\partial \chi'^{D}} \\   
+\Rightarrow J^{CD}\frac{\partial H}{\partial \chi'^{D}} &=  
+             \frac{\partial \chi'^{C}}{\partial \chi^{A}}J^{AB}\frac{\partial \chi'^{D}}{\partial \chi^{B}} \frac{\partial H}{\partial \chi'^{D}} \\   
+	\end{align*}
+	
+Por lo que:
+	\begin{equation*}
+\Rightarrow \left(J^{CD} - J^{AB}\frac{\partial \chi'^{C}}{\partial \chi^{A}}\frac{\partial \chi'^{D}}{\partial \chi^{B}}\right)\frac{\partial H}{\partial \chi'^{D}} = 0
+	\end{equation*}
+
+Y como $\frac{\partial H}{\partial \chi'^{D}}  \neq 0$ tenemos que:
+	\begin{equation*}
+		J^{CD} = J^{AB}\frac{\partial \chi'^{C}}{\partial \chi^{A}}\frac{\partial \chi'^{D}}{\partial \chi^{B}} 
+	\end{equation*}
+
+Es decir, la matriz simplectica es invariante bajo transformaciones canonicas. \\
+
+Veamos que:
+	\begin{align*}
+		J^{AB}\frac{\partial \chi'^{C}}{\partial \chi^{A}}\frac{\partial \chi'^{D}}{\partial \chi^{B}} 
+	 &= J^{aB}\frac{\partial \chi'^{C}}{\partial \chi^{a}}\frac{\partial \chi'^{D}}{\partial \chi^{B}} 
+	   +J^{\left(a+f\right)B}\frac{\partial \chi'^{C}}{\partial \chi^{a+f}}\frac{\partial \chi'^{D}}{\partial \chi^{B}} \\
+	 &= J^{ab}\frac{\partial \chi'^{C}}{\partial \chi^{a}}\frac{\partial \chi'^{D}}{\partial \chi^{b}} 
+	   +J^{a\left(b+f\right)}\frac{\partial \chi'^{C}}{\partial \chi^{a}}\frac{\partial \chi'^{D}}{\partial \chi^{b+f}} 
+	   +J^{\left(a+f\right)b}\frac{\partial \chi'^{C}}{\partial \chi^{a+f}}\frac{\partial \chi'^{D}}{\partial \chi^{b}} 
+	   +J^{\left(a+f\right)\left(b+f\right)}\frac{\partial \chi'^{C}}{\partial \chi^{a+f}}\frac{\partial \chi'^{D}}{\partial \chi^{b+f}} \\
+	\end{align*}
+	
+Recordando que la forma de la matriz simplectica:
+	\begin{equation*}
+		J^{CD} = \begin{pmatrix} J^{cd} & J^{c\left(d+f\right)} \\
+								 J^{\left(c+f\right) d} & J^{\left(c+f\right) \left(d+f\right)} \end{pmatrix}
+		= \begin{pmatrix} 0 & \delta^{cd} \\
+								 -\delta^{cd} & 0 \end{pmatrix}
+	\end{equation*}
+
+Tenemos que:
+	\begin{align*}
+		J^{AB}\frac{\partial \chi'^{C}}{\partial \chi^{A}}\frac{\partial \chi'^{D}}{\partial \chi^{B}} 
+	 &= J^{a\left(b+f\right)}\frac{\partial \chi'^{C}}{\partial \chi^{a}}\frac{\partial \chi'^{D}}{\partial \chi^{b+f}} 
+	   +J^{\left(a+f\right)b}\frac{\partial \chi'^{C}}{\partial \chi^{a+f}}\frac{\partial \chi'^{D}}{\partial \chi^{b}} \\
+	 &= \delta^{ab}\frac{\partial \chi'^{C}}{\partial q^{a}}\frac{\partial \chi'^{D}}{\partial p_{b}}
+	   -\delta^{ab}\frac{\partial \chi'^{C}}{\partial p_{a}}\frac{\partial \chi'^{D}}{\partial q^{b}} \\
+	 &= \frac{\partial \chi'^{C}}{\partial q^{a}}\frac{\partial \chi'^{D}}{\partial p_{a}}
+	   -\frac{\partial \chi'^{C}}{\partial p_{a}}\frac{\partial \chi'^{D}}{\partial q^{a}} \\	   
+	 &= \left\{ \chi'^{C}, \chi'^{D}  \right\}	 
+	\end{align*}	 
+
+Por lo tanto:
+	\begin{equation*}
+		\left\{ \chi'^{C}, \chi'^{D}  \right\}	 = J^{CD}
+	\end{equation*}
+
+Pero:
+	\begin{align*}
+	 \left\{ \chi'^{C}, \chi'^{D}  \right\}	 &=
+\begin{pmatrix}  \left\{ \chi'^{c}, \chi'^{d}  \right\} & \left\{ \chi'^{c}, \chi'^{d+f}  \right\} \\
+				 \left\{ \chi'^{c+f}, \chi'^{d}  \right\} & \left\{ \chi'^{c+f}, \chi'^{d+f}  \right\} \\
+\end{pmatrix} \\  &=
+\begin{pmatrix}  \left\{ Q^{c}, Q^{d}  \right\} & \left\{ Q^{c}, P_{d}  \right\} \\
+				 \left\{ P_{c}, Q^{d}  \right\} & \left\{ P_{c}, P_{d}  \right\} \\
+\end{pmatrix}
+	\end{align*}
+
+Y como esto debe ser igual a la matrix simplectica, tenemos que:
+	\begin{align*}
+		\left\{ Q^{c}, Q^{d}  \right\} &= 0 \\
+		\left\{ Q^{c}, P_{d}  \right\} &= \delta^{c}_{d} \\
+		\left\{ P_{c}, P_{d}  \right\} &= 0
+	\end{align*}
+
+Por lo que, para que una transformacion sea canonica, debe cumplir esas 3 condiciones.
+
+\section{El Hamiltoniano cambia de forma funcional}
+
+Esto es:
+	\begin{equation*}
+		H\left(q(Q,P),p(Q,P) \right) \neq K(Q,P)
+	\end{equation*}
+
+Tenemos que:
+	\begin{equation*}
+		\dot{q}^{a}p_{a} - H(q,p,t) =  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \frac{d\Omega}{dt}
+	\end{equation*}
+
+Para efectuar la transformaci\'on entre los dos conjuntos de variables can\'onicas ${p_{i},q^{i}}$ y ${P_{i},Q^{i}}$ la
+funci\'on $\Omega$ debe ser funci\'on tanto de las nuevas como de las antiguas coordenadas. Por lo tanto, aparte del
+tiempo $t$, la funci\'on generatriz ser\'a funci\'on de $4f$ variables $(fq^{i},fp_{i},fQ^{i},fP_{i})$. Sin embargo del total de $4f$
+variables solo $2f$ son independientes, debido a que los dos conjuntos ${p_{i},q^{i}}$ y ${P_{i},Q^{i}}$ estan relacionados
+por las ecuaciones de transformacion:
+	\begin{align*}
+		q^{i} &= q^{i}(Q,P) \\
+		p_{i} &= p_{i}(Q,P) \\
+	\end{align*}
+	
+Por lo tanto, la funci\'on generatriz puede ser expresada de una de las cuatro formas siguientes, como
+funci\'on de las variables independientes:
+	\begin{align*}
+		\Omega(q,Q,t) &= F_{1}(q,Q,t) \\
+		\Omega(q,P,t) &= F_{2}(q,P,t) \\
+		\Omega(p,Q,t) &= F_{3}(p,Q,t) \\
+		\Omega(p,P,t) &= F_{4}(p,P,t) \\
+	\end{align*}
+
+\subsection{$\Omega(q,Q,t) = F_{1}(q,Q,t)$}
+
+Tenemos que:
+	\begin{align}
+		\dot{q}^{a}p_{a} - H(q,p,t) &=  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \frac{dF_{1}}{dt} \\ \label{eqF1}
+\Rightarrow \dot{q}^{a}p_{a} - H(q,p,t) &=  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \frac{\partial F_{1}}{\partial q^{a}}\dot{q}^{a} 
+										   +\frac{\partial F_{1}}{\partial Q^{a}}\dot{Q}^{a} + \frac{\partial F_{1}}{\partial t}\\
+	\end{align}
+
+De donde:
+	\begin{equation*}
+		\left(p_{a} - \frac{\partial F_{1}}{\partial q^{a}} \right)\dot{q}^{a}
+	   -\left( P_{a} +\frac{\partial F_{1}}{\partial Q^{a}} \right)\dot{Q}^{a}
+	   - \left(H - K + \frac{\partial F_{1}}{\partial t}\right)  = 0
+	\end{equation*}
+	
+Y como los $\{ \dot{q}^{a} \}$ y $\{ \dot{Q}^{a} \}$ son l.i, entonces:
+	\begin{align*}
+		p_{a} &= \frac{\partial F_{1}}{\partial q^{a}}\\
+		P_{a} &= -\frac{\partial F_{1}}{\partial Q^{a}} \\
+		K &= H + \frac{\partial F_{1}}{\partial t}
+	\end{align*}
+
+\subsection{$\Omega(q,P,t) = F_{2}(q,P,t)$}
+
+El paso de $(q^{a},Q^{a})$  a $(q^{a},P_{a})$ como coordenadas independientes debe hacerte mediante una transformaci\'on de Legrendre.
+As\'i:
+	\begin{equation*}
+		F_{2}(q,P,t) = -P_{a}Q^{a} - F_{1}
+	\end{equation*}
+
+Absorviendo el signo menos, en $F_{2}$ tenemos:
+	\begin{align*}
+		F_{2} &= P_{a}Q^{a} + F_{1} \\
+		F_{1} &= -P_{a}Q^{a} + F_{2} 
+	\end{align*}
+
+Por lo que, reemplazando en \eqref{eqF1} tenemos que:
+	\begin{align*}
+		\dot{q}^{a}p_{a} - H(q,p,t) &=  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \frac{d}{dt} \left( -P_{a}Q^{a} + F_{2} \right) \\ \label{eqF1}
+\Rightarrow \dot{q}^{a}p_{a} - H(q,p,t) &=  \dot{Q}^{a}P_{a} - K(Q,P,t)  - \dot{P}_{a}Q^{a} - P_{a}\dot{Q}^{a}
+										   +\frac{\partial F_{2}}{\partial q^{a}}\dot{q}^{a} 
+										   +\frac{\partial F_{2}}{\partial P_{a}}\dot{P}_{a} + \frac{\partial F_{2}}{\partial t}\\
+	\end{align*}
+	
+De donde:
+	\begin{equation*}
+		\left(p_{a} - \frac{\partial F_{2}}{\partial q^{a}} \right)\dot{q}^{a}
+	   -\left( Q^{a} -\frac{\partial F_{2}}{\partial P_{a}} \right)\dot{P}_{a}
+	   - \left(H - K + \frac{\partial F_{2}}{\partial t}\right)  = 0
+	\end{equation*}
+
+Y como son las derivadas son linealmente independientes:
+	\begin{align*}
+		p_{a} &= \frac{\partial F_{2}}{\partial q^{a}}\\
+		Q^{a} &= \frac{\partial F_{2}}{\partial P_{a}} \\
+		K &= H + \frac{\partial F_{2}}{\partial t}
+	\end{align*}
+
+\subsection{$\Omega(p,Q,t) = F_{3}(p,Q,t)$}
+
+Analogamente, haciendo una transformacion de Legendre (y absorviendo un signo menos) obtenemos que:
+	\begin{align*}
+		F_{3}(p,Q,t) &= -p_{a}Q^{a} + F_{1} \\
+		\Rightarrow F_{1} &= p_{a}Q^{a} + F_{1}
+	\end{align*}
+	
+Por lo que, reemplazando en \eqref{eqF1} tenemos que:
+	\begin{align*}
+		\dot{q}^{a}p_{a} - H(q,p,t) &=  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \frac{d}{dt} \left( p_{a}Q^{a} + F_{1} \right) \\ \label{eqF1}
+\Rightarrow \dot{q}^{a}p_{a} - H(q,p,t) &=  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \dot{p}_{a}Q^{a} + p_{a}\dot{Q}^{a}
+										   +\frac{\partial F_{3}}{\partial Q^{a}}\dot{Q}^{a} 
+										   -\frac{\partial F_{3}}{\partial p_{a}}\dot{p}_{a} + \frac{\partial F_{3}}{\partial t}\\
+	\end{align*}
+	
+De donde:
+	\begin{equation*}
+		\left(q^{a} + \frac{\partial F_{3}}{\partial p_{a}} \right)\dot{p}_{a}
+	   -\left( P_{a} +\frac{\partial F_{3}}{\partial Q^{a}} \right)\dot{Q}^{a}
+	   - \left(H - K + \frac{\partial F_{3}}{\partial t}\right)  = 0
+	\end{equation*}
+
+Y como son las derivadas son linealmente independientes:
+	\begin{align*}
+		q^{a} &= -\frac{\partial F_{3}}{\partial p_{a}}\\
+		P_{a} &= -\frac{\partial F_{3}}{\partial Q^{a}} \\
+		K &= H + \frac{\partial F_{3}}{\partial t}
+	\end{align*}
+
+\subsection{$\Omega(p,P,t) = F_{4}(p,P,t)$}
+
+Analogamente, haciendo una transformacion de Legendre (y absorviendo un signo menos) obtenemos que:
+	\begin{align*}
+		F_{4}(p,Q,t) &= -p_{a}q^{a}+P_{a}Q^{a} + F_{1} \\
+		\Rightarrow F_{1} &= p_{a}q^{a} - P_{a}Q^{a} + F_{4}
+	\end{align*}
+	
+Por lo que, reemplazando en \eqref{eqF1} tenemos que:
+	\begin{align*}
+		\dot{q}^{a}p_{a} - H(q,p,t) &=  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \frac{d}{dt} \left( p_{a}q^{a} - P_{a}Q^{a} + F_{4} \right) \\ \label{eqF1}
+\Rightarrow \dot{q}^{a}p_{a} - H(q,p,t) &=  \dot{Q}^{a}P_{a} - K(Q,P,t)  + \dot{p}_{a}q^{a} + p_{a}\dot{q}^{a}
+										   - \dot{P}_{a}Q^{a} - P_{a}\dot{Q}^{a}
+										   +\frac{\partial F_{4}}{\partial Q^{a}}\dot{Q}^{a} 
+										   -\frac{\partial F_{4}}{\partial P_{a}}\dot{P}_{a} + \frac{\partial F_{3}}{\partial t}\\
+	\end{align*}
+	
+De donde:
+	\begin{equation*}
+		\left(q^{a} + \frac{\partial F_{4}}{\partial p_{a}} \right)\dot{p}_{a}
+	   -\left( Q_{a} -\frac{\partial F_{4}}{\partial P_{a}} \right)\dot{P}_{a}
+	   - \left(H - K + \frac{\partial F_{3}}{\partial t}\right)  = 0
+	\end{equation*}
+
+Y como son las derivadas son linealmente independientes:
+	\begin{align*}
+		q^{a} &= -\frac{\partial F_{4}}{\partial p_{a}}\\
+		Q^{a} &= \frac{\partial F_{4}}{\partial P_{a}} \\
+		K &= H + \frac{\partial F_{4}}{\partial t}
+	\end{align*}
+
+
+\end{document}
+
+
