@@ -21,10 +21,8 @@ Estimados estudiantes, las ayudantías que haré irán apareciendo a medida las 
 - Ayudantía 1: https://mega.nz/#!QF4GBKpZ!xIn6pJ78Pjk7lYQLXJDWdaSCq1PyFsyBb9LQgVY4VsU
 - Ayudantía 2: https://mega.nz/#!xZ5ERCTL!sJcnRlxh3lnnqIjDiZQ8osMCGbsvmmRHN_lDrfrog_I
 
-NOTA IMPORTANTE (Añadida el (22/04/19)): 
+NOTA IMPORTANTE (Añadida el (01/05/19)): 
 
-Estimados, me informaron que varios están interesados en una ayudantía extra, debido a que la semana pasada no hubo. De hacerla, estaría atento a sus sugerencias sobre el tipo de ejercicios que desean ver, y en el horario en el cuál hacerlo (Dispongo de toda la semana, menos el Martes de 17 a 19, ni el Jueves de 15 a 17). Así que cree una encuesta para que puedan interactuar, a la cual pueden acceder desde el siguiente link: 
-
-- Encuesta: https://www.survio.com/survey/d/V6K4H9M3T5X7J5T5U
+Estimados, me informan que las actividades de la toma seguirán incluso el Viernes, pero que se retomarán las clases el día Lunes. Ésto nos lleva a tener que reprogramar la ayudantía extra en una semana, y debido a que las clases también fueron canceladas, no se precisa recuperar una ayudantía ya que no habría materia. Muchos disponían el Martes de 8 a 10, y me temo que es un horario en el cual estaré disponible, ya que el profesor Fabrizio Canfora vendrá a dictar un ramo durante la semana (obligatorio para nosotros) de 10 a 12, y de 15 a 17 todos los días de la semana. Ya veré cómo lo hago para la ayudantía del Viernes. Sin más que agregar, personas que no puedan el Martes de 8 a 10 por favor escribirme a "ceriquelme@udec.cl" para coordinar una ayudantía para ellos. 
 
 Saludos, César.
